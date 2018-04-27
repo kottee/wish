@@ -62,6 +62,6 @@ class ContentController extends Controller
 		    'currentItems' => $items
 		);
 
-		return $twig->render('TopItems::content.TopItems', $templateData);
+		return $twig->render('Wish::content.TopItems', $templateData);
     	}
 }
