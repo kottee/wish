@@ -1,0 +1,8 @@
+{
+      "name":"Wish",
+      "description":"My first plugin",
+      "namespace":"Wish",
+      "author":"BC",
+      "type":"template",
+      "serviceProvider":"Wish\\Providers\\WishServiceProvider"
+}
