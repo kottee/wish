@@ -3,6 +3,7 @@ namespace Wish\Controllers;
 
 use Plenty\Plugin\Controller;
 use Plenty\Plugin\Templates\Twig;
+use Plenty\Plugin\Log\Loggable;
 use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
 
 /**
@@ -11,6 +12,7 @@ use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
  */
 class ContentController extends Controller
 {
+	use Loggable;
 	/**
 	 * @param Twig $twig
 	 * @return string
@@ -61,7 +63,7 @@ class ContentController extends Controller
 		    'resultCount' => $resultItems->count(),
 		    'currentItems' => $items
 		);
-
+		$this->getLogger(__METHOD__)->error('Wish::itemRepository', $resultItems);
 		return $twig->render('Wish::content.TopItems', $templateData);
     	}
 }
