@@ -25,20 +25,68 @@ class ContentController extends Controller
 	public function sayHello(Twig $twig, ItemDataLayerRepositoryContract $itemRepository):string
     	{
 		$itemColumns = [
-		    'itemDescription' => [
-			'name1',
-			'description'
-		    ],
-		    'variationBase' => [
-			'id'
-		    ],
-		    'variationRetailPrice' => [
-			'price'
-		    ],
-		    'variationImageList' => [
-			'path',
-			'cleanImageName'
-		    ]
+			'itemBase' => [
+				'id',
+				'producer',
+			],
+			'itemShippingProfilesList' => [
+				'id',
+				'name',
+			],
+			'itemDescription' => [				
+				'name1',
+				'description',
+				'shortDescription',
+				'technicalData',
+				'keywords',
+				'lang'				
+			],
+			'variationMarketStatus' => [
+				'id',
+				'sku',
+				'marketStatus',
+				'additionalInformation',
+			],
+			'variationBase' => [
+				'id',
+				'limitOrderByStockSelect',
+				'weightG',
+				'lengthMm',
+				'widthMm',
+				'heightMm',
+				'attributeValueSetId',
+			],
+			'variationRetailPrice' => [
+				'price',
+				'currency'
+			],
+			'variationStock' => [
+				'stockNet'
+			],
+			'variationStandardCategory' => [
+				'categoryId'
+			],
+			'itemCharacterList' => [
+				'itemCharacterId',
+				'characterId',
+				'characterValue',
+				'characterValueType',
+				'isOrderCharacter',
+				'characterOrderMarkup'
+			],
+			'variationAttributeValueList' => [
+				'attributeId',
+				'attributeValueId'
+			],
+			'variationImageList' => [
+				'imageId',
+				'type',
+				'fileType',
+				'path',
+				'position',
+				'attributeValueId',
+				'cleanImageName'
+			]
 		];
 
 		$itemFilter = [
