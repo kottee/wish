@@ -6,6 +6,8 @@ use Plenty\Plugin\Templates\Twig;
 use Plenty\Plugin\Log\Loggable;
 use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
 
+use Plenty\Modules\Plugin\Libs\Contracts\LibraryCallContract;
+
 /**
  * Class ContentController
  * @package HelloWorld\Controllers
@@ -13,6 +15,13 @@ use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
 class ContentController extends Controller
 {
 	use Loggable;
+	
+	public $libCall;
+	
+	public function __construct(LibraryCallContract $libCall){
+		$this->libCall = $libCall;
+	}
+	
 	/**
 	 * @param Twig $twig
 	 * @return string
@@ -24,6 +33,9 @@ class ContentController extends Controller
 	
 	public function sayHello(Twig $twig, ItemDataLayerRepositoryContract $itemRepository):string
     	{
+		$sofortRequestParams['id'] = '123';
+		$paymentResult = $this->libCall->call('WISH::getConnection', $sofortRequestParams);
+		$this->getLogger(__METHOD__)->error('Wish::LIBCALL', $paymentResult);
 		$itemColumns = [
 			'itemDescription' => [				
 				'name1',
