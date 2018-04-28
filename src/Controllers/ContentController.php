@@ -33,6 +33,14 @@ class ContentController extends Controller
 				'keywords',
 				'lang'				
 			],
+			'itemBase' => [				
+				'id',
+				'createDate',
+				'lastUpdateTimestamp',
+				'type',
+				'variationCount',
+				'producerId'				
+			],
 			'variationBase' => [
 				'id',
 				'limitOrderByStockSelect',
