@@ -34,7 +34,7 @@ class ContentController extends Controller
 	public function sayHello(Twig $twig, ItemDataLayerRepositoryContract $itemRepository):string
     	{
 		$sofortRequestParams['id'] = '123';
-		$paymentResult = $this->libCall->call('WISH::getConnection', $sofortRequestParams);
+		$paymentResult = $this->libCall->call('Wish::getConnection', $sofortRequestParams);
 		$this->getLogger(__METHOD__)->error('Wish::LIBCALL', $paymentResult);
 		$itemColumns = [
 			'itemDescription' => [				
