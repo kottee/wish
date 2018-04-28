@@ -66,7 +66,7 @@ class ContentController extends Controller
 		];
 		
 		$itemFilter['itemBase.wasUpdatedBetween'] = [
-				'timestampFrom' => strtotime("-20 days"),
+				'timestampFrom' => strtotime("-1 days"),
 				'timestampTo'   => time(),
 			];
 
