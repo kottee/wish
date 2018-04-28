@@ -25,14 +25,6 @@ class ContentController extends Controller
 	public function sayHello(Twig $twig, ItemDataLayerRepositoryContract $itemRepository):string
     	{
 		$itemColumns = [
-			'itemBase' => [
-				'id',
-				'producer',
-			],
-			'itemShippingProfilesList' => [
-				'id',
-				'name',
-			],
 			'itemDescription' => [				
 				'name1',
 				'description',
@@ -40,12 +32,6 @@ class ContentController extends Controller
 				'technicalData',
 				'keywords',
 				'lang'				
-			],
-			'variationMarketStatus' => [
-				'id',
-				'sku',
-				'marketStatus',
-				'additionalInformation',
 			],
 			'variationBase' => [
 				'id',
@@ -59,24 +45,6 @@ class ContentController extends Controller
 			'variationRetailPrice' => [
 				'price',
 				'currency'
-			],
-			'variationStock' => [
-				'stockNet'
-			],
-			'variationStandardCategory' => [
-				'categoryId'
-			],
-			'itemCharacterList' => [
-				'itemCharacterId',
-				'characterId',
-				'characterValue',
-				'characterValueType',
-				'isOrderCharacter',
-				'characterOrderMarkup'
-			],
-			'variationAttributeValueList' => [
-				'attributeId',
-				'attributeValueId'
 			],
 			'variationImageList' => [
 				'imageId',
