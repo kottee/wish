@@ -64,12 +64,17 @@ class ContentController extends Controller
 				'cleanImageName'
 			]
 		];
+		
+		$itemFilter['itemBase.wasUpdatedBetween'] = [
+				'timestampFrom' => strtotime("-20 days"),
+				'timestampTo'   => time(),
+			];
 
-		$itemFilter = [
-		    'itemBase.isStoreSpecial' => [
-			'shopAction' => [3]
-		    ]
-		];
+		//$itemFilter = [
+		//    'itemBase.isStoreSpecial' => [
+		//	'shopAction' => [3]
+		//    ]
+		//];
 
 		$itemParams = [
 		    'language' => 'en'
