@@ -4,5 +4,8 @@
       "namespace":"Wish",
       "author":"BC",
       "type":"template",
-      "serviceProvider":"Wish\\Providers\\WishServiceProvider"
+      "serviceProvider":"Wish\\Providers\\WishServiceProvider",
+      "dependencies":{
+            "wish/php-sdk":"*"
+      }
 }
