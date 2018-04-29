@@ -1,10 +1,10 @@
 {
-      "name":"Wish",
+      "name":"Wishtest",
       "description":"My first plugin",
-      "namespace":"Wish",
+      "namespace":"Wishtest",
       "author":"BC",
       "type":"template",
-      "serviceProvider":"Wish\\Providers\\WishServiceProvider",
+      "serviceProvider":"Wishtest\\Providers\\WishtestServiceProvider",
       "dependencies":{
             "wish/php-sdk":"*"
       }

@@ -1,8 +1,8 @@
 {
     "formatVersion": 1,
     "menu": {
-        "Config.WishAppSettingsTab": {
-            "label": "Config.WishAppSettingsTab",
+        "Config.WishtestAppSettingsTab": {
+            "label": "Config.WishtestAppSettingsTab",
             "formFields": {
                 "client_id": {
                     "type": "inputText",
