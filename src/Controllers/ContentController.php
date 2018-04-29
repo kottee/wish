@@ -1,5 +1,5 @@
 <?php
-namespace Wish\Controllers;
+namespace Wishtest\Controllers;
 
 use Plenty\Plugin\Controller;
 use Plenty\Plugin\Templates\Twig;
@@ -28,14 +28,14 @@ class ContentController extends Controller
 	 */
 	public function sayHelloT(Twig $twig):string
 	{
-		return $twig->render('Wish::content.hello');
+		return $twig->render('Wishtest::content.hello');
 	}
 	
 	public function sayHello(Twig $twig, ItemDataLayerRepositoryContract $itemRepository):string
     	{
 		$sofortRequestParams['id'] = '123';
-		$paymentResult = $this->libCall->call('Wish::getConnection', $sofortRequestParams);
-		$this->getLogger(__METHOD__)->error('Wish::LIBCALL', $paymentResult);
+		$paymentResult = $this->libCall->call('Wishtest::getConnection', $sofortRequestParams);
+		$this->getLogger(__METHOD__)->error('Wishtest::LIBCALL', $paymentResult);
 		$itemColumns = [
 			'itemDescription' => [				
 				'name1',
@@ -104,7 +104,7 @@ class ContentController extends Controller
 		    'resultCount' => $resultItems->count(),
 		    'currentItems' => $items
 		);
-		$this->getLogger(__METHOD__)->error('Wish::itemRepository', $resultItems);
-		return $twig->render('Wish::content.TopItems', $templateData);
+		$this->getLogger(__METHOD__)->error('Wishtest::itemRepository', $resultItems);
+		return $twig->render('Wishtest::content.TopItems', $templateData);
     	}
 }
