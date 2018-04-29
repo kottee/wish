@@ -5,10 +5,11 @@
 //use Wish\Exception\OrderAlreadyFulfilledException;
 //use Wish\Model\WishReason;
 
-$token = 'b7a3bc5b0a0148208f2e80387f292366';
-$client = new \Wish\WishClient($token,'sandbox');
+//$token = 'b7a3bc5b0a0148208f2e80387f292366';
+//$client = new \Wish\WishClient($token,'sandbox');
 
-$changed_orders = $client->getAllChangedOrdersSince();
+//$changed_orders = $client->getAllChangedOrdersSince();
+//return $changed_orders;
 
 $paymentResult = [];
 
@@ -18,4 +19,4 @@ $paymentResult['id'] = SdkRestApi::getParam('id');
 $paymentResult['transactionId'] = '1234567890';
 $paymentResult['paymentUrl'] = 'TTT';
 
-return $changed_orders;
+return $paymentResult;
